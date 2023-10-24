@@ -20,9 +20,9 @@ export default async function ProjectsPage() {
 		return acc;
 	}, {} as Record<string, number>);
 
-	const featured = allProjects.find((project) => project.slug === "unkey")!;
-	const top2 = allProjects.find((project) => project.slug === "planetfall")!;
-	const top3 = allProjects.find((project) => project.slug === "highstorm")!;
+	const featured = allProjects.find((project) => project.slug === "yukta")!;
+	const top2 = allProjects.find((project) => project.slug === "stuctural insights")!;
+	const top3 = allProjects.find((project) => project.slug === "netflix case study")!;
 	const sorted = allProjects
 		.filter((p) => p.published)
 		.filter(
@@ -52,6 +52,9 @@ export default async function ProjectsPage() {
 				<div className="w-full h-px bg-zinc-800" />
 
 				<div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
+					<p className="ongoing">
+						Ongoing Projects
+					</p>
 					<Card>
 						<Link href={`/projects/${featured.slug}`}>
 							<article className="relative w-full h-full p-4 md:p-8">
